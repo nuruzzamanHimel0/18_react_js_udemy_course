@@ -1,0 +1,27 @@
+##################
+
+const printMyName =  (name) => {
+    console.log( name );
+}
+
+printMyName( "Himel" );
+
+const printHellowMsg = ()=>{
+  console.log( "hellow world" );
+}
+
+printHellowMsg();
+
+
+################# Multiply #####
+
+const sumNumber = ( number ) => {
+  return number + 2;
+}
+
+console.log ( sumNumber(4) );
+// same code
+
+const sumNumber = ( number ) =>   number + 2;
+
+console.log ( sumNumber(4) );

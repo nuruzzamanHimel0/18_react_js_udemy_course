@@ -1,0 +1,42 @@
+############ class creae and object crea ###
+class NewClass{
+  
+  name = "Md Nuruzzaman Hime";
+  
+  setName (newName) {
+    this.name = newName;
+  }
+  
+  getName  = ()=> {
+    return this.name;
+  }
+}
+
+const nameObj = new NewClass();
+
+console.log( nameObj.name  );
+
+nameObj.setName( 'This is my name update'  );
+
+console.log( nameObj.getName()  );
+
+
+####### constructor class ######
+
+class NewClass{
+  
+  constructor(){
+    this.name = 'Md Himel';
+  }
+  
+  getName  = ()=> {
+    return this.name;
+  }
+}
+
+const nameObj = new NewClass();
+
+console.log( nameObj.getName()  );
+
+
+
