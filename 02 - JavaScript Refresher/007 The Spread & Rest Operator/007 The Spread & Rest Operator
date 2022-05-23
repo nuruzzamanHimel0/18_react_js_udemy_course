@@ -1,0 +1,27 @@
+####### spread operator #######
+
+const makeArray = [1,2,3];
+
+const newArray = [...makeArray,4  ];
+
+const makeObj = {
+  name: "himel"
+}
+
+const newObj = {
+  ...makeObj,
+  'age': 20
+}
+
+console.log ( newArray );
+
+console.log(newObj  );
+
+
+####### rest operator 
+
+const filter = ( ...arg ) =>{
+  return arg.filter( el => el === 1 );
+}
+
+console.log( filter( 1,2,3 )  )

@@ -38,5 +38,32 @@ const nameObj = new NewClass();
 
 console.log( nameObj.getName()  );
 
+########### Class inheritance ##########
+
+class Human{
+  constructor(){
+    this.gender = "Male";
+  }
+  printGender(){
+    return this.gender;
+  }
+}
+
+class NewClass extends Human  {
+
+  constructor(){
+    super();
+    this.name = 'Md Himel';
+  }
+  
+  getName  = ()=> {
+    return this.name;
+  }
+}
+
+const nameObj = new NewClass();
+
+console.log( nameObj.getName(), nameObj.printGender()  );
+
 
 
