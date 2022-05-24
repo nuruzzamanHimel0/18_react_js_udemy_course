@@ -1,0 +1,22 @@
+################## ES6 next generation syntex ##########
+class Animal{
+  
+ name = "Himel Nuruzzaman";
+  
+  getName(){
+    return this.name;
+  }
+  
+}
+
+class Cow extends Animal{
+  cowName ="Austorilian cow";
+  getCowName(){
+    return this.cowName;
+  }
+}
+
+const objAnimal = new Animal();
+const cowObj = new Cow();
+
+console.log( objAnimal.getName(), cowObj.getCowName() );
