@@ -1,0 +1,32 @@
+// premitive type
+let number = 10
+let number2 = number;
+
+number = 11;
+
+console.log( number2 );
+
+//reference type 
+
+let person = {
+  name: 'himle'
+}
+
+let person2 = person;
+person.name =" Tomal"
+
+console.log( person2 );
+
+###### make new object 
+
+let person = {
+    name: 'himle'
+  }
+  
+  let person2 = {
+    ...person
+  };
+  person.name =" Tomal"
+  
+  console.log( person );
+  console.log( person2 );
