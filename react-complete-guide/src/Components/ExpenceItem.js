@@ -1,6 +1,12 @@
 function ExpenceItem(){
     return (
-        <h1>This is custom component</h1>
+       <div>
+           <div>Match 28th 2022</div>
+           <div>
+               <h2>Carinsurence</h2>
+               <p>$294.6</p>
+           </div>
+       </div>
     );
 }
 
