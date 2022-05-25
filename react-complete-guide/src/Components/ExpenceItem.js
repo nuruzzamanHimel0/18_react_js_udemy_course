@@ -1,10 +1,12 @@
+import './ExpenceItem.css'
+
 function ExpenceItem(){
     return (
-       <div>
-           <div>Match 28th 2022</div>
-           <div>
+       <div className='experience-item'>
+           <div className='experience-item-date'>Match 28th 2022</div>
+           <div className='experience-item-price'>
                <h2>Carinsurence</h2>
-               <p>$294.6</p>
+               <div>$294.6</div>
            </div>
        </div>
     );
