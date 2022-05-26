@@ -1,12 +1,15 @@
 import './ExpenceItem.css'
 
-function ExpenceItem(){
+function ExpenceItem(props){
+
     return (
        <div className='experience-item'>
-           <div className='experience-item-date'>Match 28th 2022</div>
+           <div className='experience-item-date'>
+               { props.datetime.toDateString() }
+           </div>
            <div className='experience-item-price'>
-               <h2>Carinsurence</h2>
-               <div>$294.6</div>
+               <h2> {props.title} </h2>
+               <div>${props.amount}</div>
            </div>
        </div>
     );
