@@ -1,12 +1,12 @@
+import ExpenceDate from './ExpenceDate.js'
 import './ExpenceItem.css'
 
 function ExpenceItem(props){
 
     return (
        <div className='experience-item'>
-           <div className='experience-item-date'>
-               { props.datetime.toDateString() }
-           </div>
+           <ExpenceDate datetime={props.datetime} />
+           
            <div className='experience-item-price'>
                <h2> {props.title} </h2>
                <div>${props.amount}</div>
