@@ -3,9 +3,10 @@ import ExpenceDate from './ExpenceDate.js'
 import Card from '../UI/Card.js'
 import "./css/ExpenceList.css"
 const ExpenceList = (props)=>{
-
+    let title = props.expences.title;
     const clickHandler = ()=>{
-        console.log('click for title');
+        title = "Updated title";
+        console.log( title );
     };
   
     return (
@@ -14,7 +15,7 @@ const ExpenceList = (props)=>{
             <ExpenceDate datetime={props.expences.datetime} />
             <div className="expence_name_price">
                 <div className="expence_name">
-                <p>{props.expences.title}</p>
+                <p>{title}</p>
                 </div>
                 <div className="expence_price">
                     <p>${props.expences.amount}</p>
