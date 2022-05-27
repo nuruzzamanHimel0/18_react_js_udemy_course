@@ -2,7 +2,7 @@
 
 import Expence from './Components/Expences/Expence.js'
 
-function App(){
+const App = ()=>{
   const expences = [
     { id:1, title:"Car Insurence", datetime :new Date(2021,5, 21), amount: 275.01 },
     { id:2, title:"Book Insurence", datetime :new Date(2021,5, 21), amount: 2735.01 },
@@ -14,9 +14,6 @@ function App(){
       <h1> Let us start</h1>
 
       <Expence expences={expences}></Expence>
-     
-   
-    
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import ExpenceItem from './ExpenceItem.js'
 import Card from '../UI/Card.js'
-function Expence(props){
+const Expence = (props) => {
 
     return (
         <Card className="hole_expences">

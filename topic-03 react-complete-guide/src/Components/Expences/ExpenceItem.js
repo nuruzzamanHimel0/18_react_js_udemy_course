@@ -2,7 +2,7 @@ import ExpenceDate from './ExpenceDate.js'
 import Card from '../UI/Card.js'
 import './ExpenceItem.css'
 
-function ExpenceItem(props){
+const ExpenceItem = (props) =>{
 
     return (
        <Card className='experience-item'>
