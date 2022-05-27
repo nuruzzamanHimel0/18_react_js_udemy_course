@@ -1,6 +1,6 @@
 
 
-import Expence from './Components/Expence.js'
+import Expence from './Components/Expences/Expence.js'
 
 function App(){
   const expences = [

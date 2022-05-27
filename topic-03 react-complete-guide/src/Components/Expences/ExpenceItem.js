@@ -1,5 +1,5 @@
 import ExpenceDate from './ExpenceDate.js'
-import Card from "./Card.js"
+import Card from '../UI/Card.js'
 import './ExpenceItem.css'
 
 function ExpenceItem(props){
