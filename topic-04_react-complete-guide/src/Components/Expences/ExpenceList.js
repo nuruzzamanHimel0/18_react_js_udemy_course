@@ -1,12 +1,18 @@
+import React , { useState } from 'react';
 import ExpenceDate from './ExpenceDate.js'
 // wrapper component
 import Card from '../UI/Card.js'
 import "./css/ExpenceList.css"
 const ExpenceList = (props)=>{
-    let title = props.expences.title;
+    // react hook
+    const [title, setTitle] = useState(props.expences.title);
+    
+    
+    // let title = props.expences.title;
     const clickHandler = ()=>{
-        title = "Updated title";
-        console.log( title );
+        setTitle("Updated title");
+        // title = "Updated title";
+        // console.log( title );
     };
   
     return (
