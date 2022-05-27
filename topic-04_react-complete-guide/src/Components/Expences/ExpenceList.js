@@ -3,6 +3,10 @@ import ExpenceDate from './ExpenceDate.js'
 import Card from '../UI/Card.js'
 import "./css/ExpenceList.css"
 const ExpenceList = (props)=>{
+
+    const clickHandler = ()=>{
+        console.log('click for title');
+    };
   
     return (
        
@@ -14,6 +18,7 @@ const ExpenceList = (props)=>{
                 </div>
                 <div className="expence_price">
                     <p>${props.expences.amount}</p>
+                    <button onClick={clickHandler} >Click Title</button>
                 </div>
             </div>
         </Card>
