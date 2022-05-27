@@ -1,5 +1,6 @@
 
-import ExpenceItem from './Components/ExpenceItem.js'
+
+import Expence from './Components/Expence.js'
 
 function App(){
   const expences = [
@@ -12,34 +13,8 @@ function App(){
     <div>
       <h1> Let us start</h1>
 
-      <ExpenceItem 
-      title={expences[0].title}
-      amount={expences[0].amount}
-      datetime ={expences[0].datetime} >
-      
-      </ExpenceItem>
-   
-      <ExpenceItem 
-      title={expences[1].title}
-      amount={expences[1].amount}
-      datetime ={expences[1].datetime} >
-      
-      </ExpenceItem>
-   
-      <ExpenceItem 
-      title={expences[2].title}
-      amount={expences[2].amount}
-      datetime ={expences[2].datetime} >
+      <Expence expences={expences}></Expence>
      
-      </ExpenceItem>
-   
-      <ExpenceItem 
-      title={expences[3].title}
-      amount={expences[3].amount}
-      datetime ={expences[3].datetime}
-      >
-      
-      </ExpenceItem>
    
     
     </div>
