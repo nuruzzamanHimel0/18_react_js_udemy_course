@@ -1,7 +1,7 @@
 
 
 import Expence from './Components/Expences/Expence.js'
-
+import NewExpence from '../src/Components/NewExpence/NewExpence.js'
 const App = ()=>{
   const expences = [
     { id:1, title:"Car Insurence", datetime :new Date(2021,5, 21), amount: 275.01 },
@@ -11,7 +11,7 @@ const App = ()=>{
   ];
   return (
     <div>
-      <h1> Let us start</h1>
+     <NewExpence />
 
       <Expence expences={expences}></Expence>
     </div>
