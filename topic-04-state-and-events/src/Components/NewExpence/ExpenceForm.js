@@ -5,18 +5,41 @@ const ExpenceForm = () => {
     // document.getElementById('expenceForm').addEventListener('click', () => {
 
     // });
-    const [enterTitle,setEnterTitle ] = useState('');
-    const [enterPrice,setEnterPrice ] = useState('');
-    const [enterDate,setEnterDate ] = useState('');
+    // const [enterTitle,setEnterTitle ] = useState('');
+    // const [enterPrice,setEnterPrice ] = useState('');
+    // const [enterDate,setEnterDate ] = useState('');
+
+    // three state in on state
+    const [userInput, setUserInput]  = useState({
+        enterTitle : '',
+        enterPrice : '',
+        enterDate : '',
+    });
+
     const titleChangeHandler = (event) =>{
-        setEnterTitle(event.target.value);
+        setUserInput({
+            ...userInput,
+            enterTitle: event.target.value
+        });
+       
+        // setEnterTitle(event.target.value);
     }
+   
     const priceChangeHandler = (event) => {
-        setEnterPrice(event.target.value);
+        setUserInput({
+            ...userInput,
+            enterPrice: event.target.value
+        });
+        // setEnterPrice(event.target.value);
     }
     const dateChangeHandler = (event) => {
-        setEnterDate(event.target.value);
+        setUserInput({
+            ...userInput,
+            enterDate: event.target.value
+        });
+        // setEnterDate(event.target.value);
     }
+    console.log(userInput);
     return (
         <div className="expence_form">
             <form>
