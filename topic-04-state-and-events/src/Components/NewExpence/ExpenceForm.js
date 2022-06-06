@@ -1,13 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './css/ExpenceForm.css'
 
 const ExpenceForm = () => {
     // document.getElementById('expenceForm').addEventListener('click', () => {
 
     // });
+    const [enterTitle,setEnterTitle ] = useState('');
+    const [enterPrice,setEnterPrice ] = useState('');
+    const [enterDate,setEnterDate ] = useState('');
     const titleChangeHandler = (event) =>{
-        
-        console.log(event.target.value);
+        setEnterTitle(event.target.value);
+    }
+    const priceChangeHandler = (event) => {
+        setEnterPrice(event.target.value);
+    }
+    const dateChangeHandler = (event) => {
+        setEnterDate(event.target.value);
     }
     return (
         <div className="expence_form">
@@ -18,11 +26,11 @@ const ExpenceForm = () => {
                 </div>
                 <div className="form-group">
                     <label>Amount</label>
-                    <input type="number" id="priceForm" />
+                    <input type="number" id="priceForm" onChange={priceChangeHandler} />
                 </div>
                 <div className="form-group">
                     <label>Date</label>
-                    <input type="date" id="titleDates" />
+                    <input type="date" id="titleDates" onChange={dateChangeHandler} />
                 </div>
                 <div>
                 <button>Submit Experince</button>
