@@ -2,14 +2,12 @@ import React, {useState} from 'react'
 import './css/ExpenceForm.css'
 
 const ExpenceForm = () => {
-    // document.getElementById('expenceForm').addEventListener('click', () => {
-
-    // });
+    // multi state process
     // const [enterTitle,setEnterTitle ] = useState('');
     // const [enterPrice,setEnterPrice ] = useState('');
     // const [enterDate,setEnterDate ] = useState('');
 
-    // three state in on state
+    // three state in one state process
     const [userInput, setUserInput]  = useState({
         enterTitle : '',
         enterPrice : '',
@@ -17,25 +15,43 @@ const ExpenceForm = () => {
     });
 
     const titleChangeHandler = (event) =>{
-        setUserInput({
-            ...userInput,
-            enterTitle: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     enterTitle: event.target.value
+        // });
+        setUserInput((prevState) =>{
+            return {
+                ...prevState,
+                enterTitle: event.target.value
+            }
         });
        
         // setEnterTitle(event.target.value);
     }
    
     const priceChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,
-            enterPrice: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     enterPrice: event.target.value
+        // });
+        setUserInput((prevState) =>{
+            return {
+                ...prevState,
+                enterPrice: event.target.value
+            }
         });
         // setEnterPrice(event.target.value);
     }
     const dateChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,
-            enterDate: event.target.value
+        // setUserInput({
+        //     ...userInput,
+        //     enterDate: event.target.value
+        // });
+        setUserInput((prevState) =>{
+            return {
+                ...prevState,
+                enterDate: event.target.value
+            }
         });
         // setEnterDate(event.target.value);
     }
