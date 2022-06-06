@@ -56,9 +56,20 @@ const ExpenceForm = () => {
         // setEnterDate(event.target.value);
     }
     console.log(userInput);
+    const formSubmitHandler = (event) =>{
+        event.preventDefault();
+        const expenceData = {
+            title : userInput.enterTitle,
+            price : userInput.enterPrice,
+            date : new Date(userInput.enterDate),
+        }
+
+        console.log(expenceData);
+   
+    }
     return (
         <div className="expence_form">
-            <form>
+            <form onSubmit={formSubmitHandler}>
                 <div className="form-group">
                     <label >Title</label>
                     <input type="text" id="titleForm" onChange={titleChangeHandler} />
