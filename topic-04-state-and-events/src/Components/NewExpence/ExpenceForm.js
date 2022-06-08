@@ -1,18 +1,20 @@
 import React, {useState} from 'react'
 import './css/ExpenceForm.css'
 
-const ExpenceForm = () => {
+const ExpenceForm = (props) => {
     // multi state process
     // const [enterTitle,setEnterTitle ] = useState('');
     // const [enterPrice,setEnterPrice ] = useState('');
     // const [enterDate,setEnterDate ] = useState('');
 
-    // three state in one state process
+    // three state in one state process (dis-structure)
     const [userInput, setUserInput]  = useState({
         enterTitle : '',
         enterPrice : '',
         enterDate : '',
     });
+
+  
 
     const titleChangeHandler = (event) =>{
         // setUserInput({
@@ -55,7 +57,7 @@ const ExpenceForm = () => {
         });
         // setEnterDate(event.target.value);
     }
-    console.log(userInput);
+    // console.log(userInput);
     const formSubmitHandler = (event) =>{
         event.preventDefault();
         const expenceData = {
@@ -63,8 +65,13 @@ const ExpenceForm = () => {
             price : userInput.enterPrice,
             date : new Date(userInput.enterDate),
         }
-
-        console.log(expenceData);
+        setUserInput({
+            enterTitle : '',
+            enterPrice : '',
+            enterDate : '',
+        });
+        props.onChangeExpenceData( expenceData );
+        // console.log(expenceData);
    
     }
     return (
@@ -72,15 +79,21 @@ const ExpenceForm = () => {
             <form onSubmit={formSubmitHandler}>
                 <div className="form-group">
                     <label >Title</label>
-                    <input type="text" id="titleForm" onChange={titleChangeHandler} />
+                    <input type="text" id="titleForm" 
+                    value={userInput.enterTitle}
+                    onChange={titleChangeHandler} />
                 </div>
                 <div className="form-group">
                     <label>Amount</label>
-                    <input type="number" id="priceForm" onChange={priceChangeHandler} />
+                    <input type="number" id="priceForm" 
+                    value={userInput.enterPrice}
+                    onChange={priceChangeHandler} />
                 </div>
                 <div className="form-group">
                     <label>Date</label>
-                    <input type="date" id="titleDates" onChange={dateChangeHandler} />
+                    <input type="date" id="titleDates" 
+                    value={userInput.enterDate}
+                    onChange={dateChangeHandler} />
                 </div>
                 <div>
                 <button>Submit Experince</button>
