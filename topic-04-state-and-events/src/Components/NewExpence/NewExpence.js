@@ -4,17 +4,20 @@ import ExpenceForm from './ExpenceForm.js'
 
 const NewExpence = (props) => {
 
-    const saveExpenceDataHandler = (enterExpenceData) => {
+    const saveExpenceDataHandler = (expence) => {
         const expenceData = {
-            ...enterExpenceData,
-            id:Math.random().toString()
-        };  
-        props.onAddExpence(expenceData);
-    //   console.log(expenceData);
-    };
+            id: Math.random().toString(),
+            ...expence,
+           
+        };
+        props.onAddExpence( expenceData );
+        // console.log( expenceData );
+    }
+
     return (
         <div className="new-exponces">
             <ExpenceForm onChangeExpenceData={saveExpenceDataHandler} />
+         
         </div>
     );
 }

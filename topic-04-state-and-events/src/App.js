@@ -10,13 +10,17 @@ const App = ()=>{
     { id:4, title:"Plan Insurence", datetime :new Date(2021,5, 21), amount: 5275.01 }
   ];
 
-  const addExpenceHandler = (expense)=>{
-    console.log("IN app js");
-    console.log(expense);
+  const addExpenceHandler = (expence) =>{
+    console.log('App . js');
+    expences.push({
+      ...expence
+    });
+    console.log( expences );
   }
+ 
   return (
     <div>
-     <NewExpence onAddExpence={addExpenceHandler} />
+     <NewExpence onAddExpence = {addExpenceHandler} />
 
       <Expence expences={expences}></Expence>
     </div>

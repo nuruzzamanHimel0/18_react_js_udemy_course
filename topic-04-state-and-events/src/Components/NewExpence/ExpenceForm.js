@@ -70,7 +70,9 @@ const ExpenceForm = (props) => {
             enterPrice : '',
             enterDate : '',
         });
+        
         props.onChangeExpenceData( expenceData );
+        
         // console.log(expenceData);
    
     }
