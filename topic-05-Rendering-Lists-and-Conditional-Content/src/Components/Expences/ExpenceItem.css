@@ -1,0 +1,49 @@
+.hole_expences{
+    width: 60%;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    padding: 15px;
+    background: green;
+    border-radius: 5px;
+}
+.experience-item{
+    width: 100%;
+    background: red;
+    height: 90px;
+    border-radius: 10px;
+    margin: 11px 0;
+    padding: 5px;
+    box-shadow: 8px 7px 8px 0px #361010;
+}
+.experience-item .experience-item-date{
+    width: 20%;
+    float: left;
+  
+    margin-left: 10px;
+}
+.experience-item-price{
+    overflow: hidden;
+    float: left;
+    width: 78%;
+}
+.experience-item-price h2{
+    overflow: hidden;
+    float: left;
+    width: 50%;
+}
+.experience-item-price div{
+    width: 34%;
+    float: right;
+    text-align: center;
+    background: #2817d4;
+    padding: 6px 0px;
+    font-size: 19px;
+    margin-top: 1px;
+    border: 3px solid #fff !important;
+    border-radius: 5px;
+}
+.experience-item-price h2{
+    margin: 0px;
+}
