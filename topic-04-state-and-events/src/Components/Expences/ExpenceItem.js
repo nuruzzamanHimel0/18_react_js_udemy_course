@@ -11,6 +11,7 @@ const ExpenceItem = (props) =>{
     const clickHandler = () => {
         setTitle ( 'Update title in here' );
     }
+    // console.log(title);
     return (
        <Card className='experience-item'>
            <ExpenceDate datetime={props.datetime} />

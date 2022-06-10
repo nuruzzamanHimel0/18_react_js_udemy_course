@@ -1,5 +1,7 @@
 
 
+
+import React from 'react'
 import Expence from './Components/Expences/Expence.js'
 import NewExpence from '../src/Components/NewExpence/NewExpence.js'
 const App = ()=>{
@@ -12,7 +14,7 @@ const App = ()=>{
 
   const addExpenceHandler = (expence) =>{
     console.log('App . js');
-    expences.push({
+    expences.unshift({
       ...expence
     });
     console.log( expences );
