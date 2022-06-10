@@ -1,0 +1,9 @@
+.ExpenceFilter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ExpenceFilter p {
+    margin:0px;
+    font-weight:bold;
+}

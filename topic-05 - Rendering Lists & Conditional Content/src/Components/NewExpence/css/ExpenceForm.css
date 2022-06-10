@@ -1,0 +1,29 @@
+.expence_form form{
+    width: 62%;
+    background: #08bcd1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+form .form-group{
+    flex-basis: 45%;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+}
+form .form-group label{
+    margin-bottom: 10px;
+}
+
+.form-group input{
+    padding: 9px 4px;
+}
+form button{
+       position: absolute;
+    right: 29px;
+    bottom: 15px;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 5px;
+}

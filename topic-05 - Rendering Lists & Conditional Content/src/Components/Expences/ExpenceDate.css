@@ -1,0 +1,9 @@
+.expance_date_inner{
+    width: 100px;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 9px 0px;
+    line-height: 21px;
+    border: 4px solid rgb(255, 255, 255);
+}
