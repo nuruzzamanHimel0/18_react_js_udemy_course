@@ -12,33 +12,17 @@ const Expence = (props) => {
     return (
         <Card className="hole_expences">
             <ExpenceFilter yearselected={filterYear} onChangeFilter = {filterYearChange} />
-            <ExpenceItem 
-            title={props.expences[0].title}
-            amount={props.expences[0].amount}
-            datetime ={props.expences[0].datetime} >
-            
-            </ExpenceItem>
-        
-            <ExpenceItem 
-            title={props.expences[1].title}
-            amount={props.expences[1].amount}
-            datetime ={props.expences[1].datetime} >
-            
-            </ExpenceItem>
-        
-            <ExpenceItem 
-            title={props.expences[2].title}
-            amount={props.expences[2].amount}
-            datetime ={props.expences[2].datetime} >
-        
-            </ExpenceItem>
-        
-            <ExpenceItem 
-            title={props.expences[3].title}
-            amount={props.expences[3].amount}
-            datetime ={props.expences[3].datetime}
-            >
-            </ExpenceItem>
+            {
+                props.expences.map(
+                    expence => 
+                    <ExpenceItem 
+                   
+                    amount={expence.amount}
+                    title={expence.title}
+                    datetime ={expence.datetime} />
+                )
+            }
+          
       </Card>
     );
 }

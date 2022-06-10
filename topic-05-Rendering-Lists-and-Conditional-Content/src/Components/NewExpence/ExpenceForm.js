@@ -17,16 +17,16 @@ const ExpenceForm = (props) => {
   
 
     const titleChangeHandler = (event) =>{
-        // setUserInput({
-        //     ...userInput,
-        //     enterTitle: event.target.value
-        // });
-        setUserInput((prevState) =>{
-            return {
-                ...prevState,
-                enterTitle: event.target.value
-            }
+        setUserInput({
+            ...userInput,
+            enterTitle: event.target.value
         });
+        // setUserInput((prevState) =>{
+        //     return {
+        //         ...prevState,
+        //         enterTitle: event.target.value
+        //     }
+        // });
        
         // setEnterTitle(event.target.value);
     }
@@ -62,8 +62,9 @@ const ExpenceForm = (props) => {
         event.preventDefault();
         const expenceData = {
             title : userInput.enterTitle,
-            price : userInput.enterPrice,
-            date : new Date(userInput.enterDate),
+            amount : userInput.enterPrice,
+            datetime : new Date(userInput.enterDate),
+
         }
         setUserInput({
             enterTitle : '',
