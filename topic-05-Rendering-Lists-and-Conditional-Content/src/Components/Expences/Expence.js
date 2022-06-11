@@ -4,7 +4,7 @@ import Card from '../UI/Card.js'
 import ExpenceFilter from './ExpenceFilter.js'
 const Expence = (props) => {
     const [filterYear, setFilterYear] = useState('all');
-    console.log("year = "+filterYear);
+    // console.log("year = "+filterYear);
     const filterYearChange = (year) => {
         setFilterYear(year);
     }

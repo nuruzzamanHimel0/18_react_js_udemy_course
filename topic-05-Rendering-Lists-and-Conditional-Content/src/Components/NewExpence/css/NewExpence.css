@@ -1,0 +1,19 @@
+.addNewExpencesInner{
+    width: 62%;
+    height: 100px;
+    background: #08bcd1;
+    border: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.addNewExpencesInner button{
+    height: 40px;
+    background: #8807e4;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
