@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import ExpencesList from './ExpencesList.js'
 import Card from '../UI/Card.js'
 import ExpenceFilter from './ExpenceFilter.js'
+import ExpenceChart from './ExpenceChart.js'
+
 const Expence = (props) => {
     const [filterYear, setFilterYear] = useState('all');
     // console.log("year = "+filterYear);
@@ -34,7 +36,12 @@ const Expence = (props) => {
     // console.log(filterExpences, filterYear);
     return (
         <Card className="hole_expences">
+  
+
             <ExpenceFilter yearselected={filterYear} onChangeFilter = {filterYearChange} />
+
+            <ExpenceChart expences ={filterExpences} />
+            
             <ExpencesList items={filterExpences} />
            
             {/* // third process ...  */}

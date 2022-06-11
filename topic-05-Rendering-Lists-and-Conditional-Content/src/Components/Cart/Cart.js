@@ -5,17 +5,23 @@ import "./Cart.css"
 
 const Cart = (props) => {
 
+    const dataPointValue = props.dataPoint.map( dataPoint => dataPoint.value  );
+    const totalMaximum = Math.max(...dataPointValue);
+    // console.log(dataPointValue, totalMaximum);
+
     return (
         <div className="cart">
             {
                 props.dataPoint.map(
-                    (dataPoint) => 
+                    (data) => 
                     <CartBar 
-                    key={dataPoint.lebel}
+                    key={data.label}
 
-                    value={dataPoint.value}
-                    maxValue ={null}
-                    label={dataPoint.lebel}
+                    value={data.value}
+
+                    maxValue = {totalMaximum}
+
+                    label = {data.label}
                     />
                 )
             }
