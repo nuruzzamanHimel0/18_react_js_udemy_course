@@ -9,20 +9,38 @@ const Expence = (props) => {
         setFilterYear(year);
     }
 
+    const filterExpences = props.expences.filter( (expence) => {
+        return expence.datetime.getFullYear().toString() === filterYear;
+    } );
+    console.log(filterExpences, filterYear);
     return (
         <Card className="hole_expences">
             <ExpenceFilter yearselected={filterYear} onChangeFilter = {filterYearChange} />
-            
             {
-                props.expences.map(
+                filterExpences.length === 0 ? ' No expences found ':
+
+                filterExpences.map(
                     (expence) => 
                     <ExpenceItem 
                     key={expence.id}
+
                     amount={expence.amount}
                     title={expence.title}
                     datetime ={expence.datetime} />
                 )
+                
             }
+            {/* // {
+            //     props.expences.map(
+            //         (expence) => 
+            //         <ExpenceItem 
+            //         key={expence.id}
+
+            //         amount={expence.amount}
+            //         title={expence.title}
+            //         datetime ={expence.datetime} />
+            //     )
+            // } */}
           
       </Card>
     );
