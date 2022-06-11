@@ -15,6 +15,7 @@ const ExpenceFilter = (props) => {
             </div>
             <div>
                 <select value={props.yearselected} onChange={dropDownFilterYearHandler} >
+                    <option value="all" >ALL</option>
                     <option value="2022" >2022</option>
                     <option value="2021" >2021</option>
                     <option value="2020" >2020</option>

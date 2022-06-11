@@ -11,8 +11,8 @@ const DUMMEY_EXPENCES = [
   { id:3, title:"pancil Insurence", datetime :new Date(2021,5, 21), amount: 5275.01 },
   { id:4, title:"Plan Insurence", datetime :new Date(2021,5, 21), amount: 5275.01 },
   { id:5, title:"Cardd Insurence", datetime :new Date(2022,5, 21), amount: 275.01 },
-  { id:5, title:"Care Insurence", datetime :new Date(2018,5, 21), amount: 275.01 },
-  { id:5, title:"Car34343 Insurence", datetime :new Date(2019,5, 21), amount: 275.01 },
+  { id:6, title:"Care Insurence", datetime :new Date(2018,5, 21), amount: 275.01 },
+  { id:7, title:"Car34343 Insurence", datetime :new Date(2019,5, 21), amount: 275.01 },
 ];
 
 const App = ()=>{
@@ -35,7 +35,7 @@ const App = ()=>{
     });
     // console.log(expenceData);
   }
-  console.log(expences);
+  // console.log(expences);
  
   return (
     <div>

@@ -7,7 +7,8 @@ const ExpenceItem = (props) =>{
   
     // console.log(title);
     return (
-       <Card className='experience-item'>
+      <li>
+         <Card className='experience-item'>
            <ExpenceDate datetime={props.datetime} />
            
            <div className='experience-item-price'>
@@ -17,6 +18,7 @@ const ExpenceItem = (props) =>{
            </div>
         
        </Card>
+      </li>
     );
 }
 
