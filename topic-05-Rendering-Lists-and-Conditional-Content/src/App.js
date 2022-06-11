@@ -30,9 +30,7 @@ const App = ()=>{
         ...prevState
       ]
     });
-
-
-    console.log(expenceData);
+    // console.log(expenceData);
   }
   console.log(expences);
  

@@ -12,11 +12,12 @@ const Expence = (props) => {
     return (
         <Card className="hole_expences">
             <ExpenceFilter yearselected={filterYear} onChangeFilter = {filterYearChange} />
+            
             {
                 props.expences.map(
-                    expence => 
+                    (expence) => 
                     <ExpenceItem 
-                   
+                    key={expence.id}
                     amount={expence.amount}
                     title={expence.title}
                     datetime ={expence.datetime} />
